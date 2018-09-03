@@ -1,0 +1,70 @@
+$sizes: (
+    '1': 1px,
+    '2': 2px,
+    '3': 3px,
+    '4': 4px,
+    '5': 5px,
+);
+$directions: (
+    'top': top,
+    'right': right,
+    'bottom': bottom,
+    'left': left,
+);
+@mixin border-class() {
+    @each $name, $size in $sizes {
+        // border full
+        .brd-#{$name}-black {
+            border: $size solid $black;
+        }
+        .brd-#{$name}-blue {
+            border: $size solid $blue;
+        }
+        // border top
+        .brd-top-#{$name}-black {
+            border-top: $size solid $black;
+        }
+        .brd-top-#{$name}-blue {
+            border-top: $size solid $blue;
+        }
+        // border right
+        .brd-right-#{$name}-black {
+            border-right: $size solid $black;
+        }
+        .brd-right-#{$name}-blue {
+            border-right: $size solid $blue;
+        }
+        // border bottom
+        .brd-bottom-#{$name}-black {
+            border-bottom: $size solid $black;
+        }
+        .brd-bottom-#{$name}-blue {
+            border-bottom: $size solid $blue;
+        }
+        // border left
+        .brd-left-#{$name}-black {
+            border-left: $size solid $black;
+        }
+        .brd-left-#{$name}-blue {
+            border-left: $size solid $blue;
+        }
+        // border radius
+        .brd-rad-#{$name} {
+            border-radius: $size;
+        }
+    }
+}
+.brd-none {
+    border: none;
+}
+.brd-rad-25 {
+    border-radius: 25%;
+}
+.brd-rad-50 {
+    border-radius: 50%;
+}
+.brd-rad-100 {
+    border-radius: 100%;
+}
+
+@include border-class();

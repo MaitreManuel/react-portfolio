@@ -5,6 +5,6 @@ import Routes from './utils/Routes';
 
 const container = document.querySelector('main#content');
 
-if(container) {
+if (container) {
   ReactDOM.render(<Routes/>, container);
 }

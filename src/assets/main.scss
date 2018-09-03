@@ -1,4 +1,40 @@
+// general
+@import 'tools/fonts/fonts';
+@import 'tools/variables';
+// libs
+// Bootstrap
+// bootstrap requirements
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/reboot';
+// bootstrap utilities
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/spacing';
+// bootstrap components
+@import '~bootstrap/scss/grid';
+// Font-Awesome
+@import '~font-awesome/scss/font-awesome';
+// custom style
+@import 'atomic_styles/atomic_styles';
+@import 'panel/panel';
+@import 'tab/tab';
+
+html {
+    font-size: 10px;
+}
 body {
-    background: #21242b;
-    color: #9dacc1;
+    background: $bg_app_grey_dark;
+    color: $text_color;
+    font-family: $roboto;
+    font-size: 1.6rem;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: bold;
+    height: 100vh;
+    line-height: 1.5;
+    letter-spacing: normal;
+    overflow: hidden;
+    width: 100vw;
 }

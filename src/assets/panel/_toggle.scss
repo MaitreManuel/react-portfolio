@@ -1,0 +1,19 @@
+#panel {
+    .toggle-panel {
+        background: $bg_app_grey_dark;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        cursor: pointer;
+        display: table;
+        height: 50px;
+        left: 100%;
+        top: 50%;
+        width: 50px;
+        transform: translate(-50%);
+        i {
+            display: table-cell;
+            padding-left: 31px;
+            vertical-align: middle;
+        }
+    }
+}

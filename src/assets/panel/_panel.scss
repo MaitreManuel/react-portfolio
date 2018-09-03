@@ -1,0 +1,15 @@
+@import 'toggle';
+
+#panel {
+    height: 100vh;
+    z-index: 2;
+    .title {
+        display: table;
+        margin: 0 auto;
+        height: 40px;
+        h5 {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
