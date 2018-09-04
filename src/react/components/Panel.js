@@ -9,7 +9,7 @@ class Panel extends Component {
     };
   }
 
-  togglePanel = () => {
+  togglePanel() {
 
   }
 

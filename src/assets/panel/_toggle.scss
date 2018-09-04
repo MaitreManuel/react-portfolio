@@ -4,6 +4,11 @@
             left: 100% !important;
         }
     }
+    &:not(:hover) {
+        .toggle-panel {
+            z-index: 1 !important;
+        }
+    }
     .toggle-panel {
         background: $bg_app_grey_dark;
         border-top-right-radius: 50%;

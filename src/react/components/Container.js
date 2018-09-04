@@ -15,7 +15,7 @@ class Container extends Component {
       <Fragment>
         <div className="container-fluid">
           <div className="row justify-content-center">
-            <div className="col-3 p-0">
+            <div className="col-panel">
               <Panel />
             </div>
             <div className="col-9 p-0">

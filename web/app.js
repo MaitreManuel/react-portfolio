@@ -24469,10 +24469,16 @@ var Panel = function (_Component) {
   function Panel(props) {
     _classCallCheck(this, Panel);
 
-    return _possibleConstructorReturn(this, (Panel.__proto__ || Object.getPrototypeOf(Panel)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Panel.__proto__ || Object.getPrototypeOf(Panel)).call(this, props));
+
+    _this.state = {};
+    return _this;
   }
 
   _createClass(Panel, [{
+    key: "togglePanel",
+    value: function togglePanel() {}
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -24480,7 +24486,7 @@ var Panel = function (_Component) {
         { id: "panel", className: "p-relative" },
         _react2.default.createElement(
           "div",
-          { className: "toggle-panel p-absolute brd-right-1-black brd-right-rad-50" },
+          { onClick: this.togglePanel, className: "toggle-panel p-absolute brd-right-1-black brd-right-rad-50" },
           _react2.default.createElement("i", { className: "fa fa-angle-left", "aria-hidden": "true" }),
           _react2.default.createElement("i", { className: "fa fa-angle-right d-none", "aria-hidden": "true" })
         ),
@@ -24575,20 +24581,35 @@ var _domready2 = _interopRequireDefault(_domready);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _domready2.default)(function () {
+  init_focus_events_panel();
+});
+
+var init_focus_events_panel = function init_focus_events_panel() {
   var panel = document.querySelector('#panel'),
       panel_toggle = document.querySelector('.toggle-panel');
+  var focus = false;
 
   if (panel && panel_toggle) {
     panel.addEventListener('mouseover', function () {
+      focus = 'progress';
       setTimeout(function () {
         panel_toggle.classList.add('z-idx');
+        focus = true;
       }, 275);
     });
     panel.addEventListener('mouseleave', function () {
-      panel_toggle.classList.remove('z-idx');
+      if (focus === 'progress') {
+        setTimeout(function () {
+          panel_toggle.classList.remove('z-idx');
+          focus = false;
+        }, 275);
+      } else {
+        panel_toggle.classList.remove('z-idx');
+        focus = false;
+      }
     });
   }
-});
+};
 
 /***/ }),
 /* 77 */
@@ -24684,7 +24705,7 @@ var Container = function (_Component) {
             { className: 'row justify-content-center' },
             _react2.default.createElement(
               'div',
-              { className: 'col-3 p-0' },
+              { className: 'col-panel' },
               _react2.default.createElement(_Panel2.default, null)
             ),
             _react2.default.createElement(
