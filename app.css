@@ -4597,6 +4597,9 @@ template {
 #panel:hover .toggle-panel {
   left: 100% !important; }
 
+#panel:not(:hover) .toggle-panel {
+  z-index: 1 !important; }
+
 #panel .toggle-panel {
   background: #21242b;
   border-top-right-radius: 50%;
@@ -4635,6 +4638,10 @@ template {
     height: 100%;
     width: 100%;
     z-index: 2; }
+
+.col-panel {
+  max-width: 360px;
+  width: 360px; }
 
 .tab {
   background: #292c33;
