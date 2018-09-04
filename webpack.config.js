@@ -144,6 +144,7 @@ if (process.env.NODE_ENV === 'production') {
       paths: glob.sync([
         path.join(__dirname, 'web/index.html'),
         path.join(__dirname, 'src/assets/**/*.js'),
+        path.join(__dirname, 'src/react/**/*.js'),
         path.join(__dirname, 'src/assets/**/*.scss'),
       ]),
     }),

@@ -1,0 +1,20 @@
+#panel {
+    .directories {
+        background: $bg_app_grey_dark;
+        height: 100%;
+        .directory {
+            display: table;
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 100%;
+            .dropdown {
+                display: table-cell;
+                vertical-align: middle;
+                .drop-icon {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

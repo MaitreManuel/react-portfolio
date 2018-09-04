@@ -1,25 +1,45 @@
-@import 'directories';
+@import 'directory';
 @import 'toggle';
 
-#panel {
-    height: 100vh;
-    z-index: 2;
-    .title {
-        display: table;
-        margin: 0 auto;
-        height: 40px;
-        h5 {
-            display: table-cell;
-            vertical-align: middle;
+@media all and (min-width: 992px) {
+    #panel {
+        height: 100vh;
+        z-index: 2;
+        .title {
+            display: table;
+            margin: 0 auto;
+            height: 40px;
+            h5 {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .wrapper-text {
+            height: 100%;
+            width: 100%;
+            z-index: 2;
         }
     }
-    .wrapper-text {
-        height: 100%;
-        width: 100%;
-        z-index: 2;
+    .col-panel {
+        margin-left: 0;
+        max-width: 360px;
+        width: 360px;
+        -webkit-transition: margin-left .2s linear;
+        -moz-transition: margin-left .2s linear;
+        transition: margin-left .2s linear;
+        &.close {
+            margin-left: -350px;
+        }
+        &.close ~ .col-tab {
+            max-width: calc(100% - 10px);
+            width: calc(100% - 10px);
+        }
     }
-}
-.col-panel {
-    max-width: 360px;
-    width: 360px;
+    .col-tab {
+        max-width: calc(100% - 360px);
+        width: calc(100% - 360px);
+        -webkit-transition: max-width .2s linear, width .2s linear;
+        -moz-transition: max-width .2s linear, width .2s linear;
+        transition: max-width .2s linear, width .2s linear;
+    }
 }

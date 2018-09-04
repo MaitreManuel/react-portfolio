@@ -1,31 +1,25 @@
 import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import Panel from './Panel';
 
-class Container extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Container = ({ children }) => {
+  const template = children;
 
-  render() {
-    const template = this.props.children;
-
-    return (
-      <Fragment>
-        <div className="container-fluid">
-          <div className="row justify-content-center">
-            <div className="col-panel">
-              <Panel />
-            </div>
-            <div className="col-9 p-0">
-              { template }
-            </div>
+  return (
+    <Fragment>
+      <div className="container-fluid">
+        <div className="row justify-content-center">
+          <div className="col-panel">
+            <Panel />
+          </div>
+          <div className="col-tab">
+            { template }
           </div>
         </div>
-      </Fragment>
-    );
-  }
+      </div>
+    </Fragment>
+  );
 }
 
 Container.propTypes = {

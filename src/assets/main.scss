@@ -18,6 +18,7 @@
 @import '~font-awesome/scss/font-awesome';
 // custom style
 @import 'atomic_styles/atomic_styles';
+@import 'components/button';
 @import 'panel/panel';
 @import 'tab/tab';
 
@@ -28,10 +29,10 @@ body {
     background: $bg_app_grey_dark;
     color: $text_color;
     font-family: $roboto;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-stretch: normal;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     height: 100vh;
     line-height: 1.5;
     letter-spacing: normal;
