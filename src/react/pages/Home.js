@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Tab from '../components/Tab';
+import Container from '../components/Container';
 
 class Home extends Component {
   constructor(props) {
@@ -9,11 +9,11 @@ class Home extends Component {
 
   render() {
     return (
-      <Tab>
+      <Container>
         <section id="Home" className="tab">
           <h1>Home</h1>
         </section>
-      </Tab>
+      </Container>
     );
   }
 }

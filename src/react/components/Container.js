@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Panel from './Panel';
 
@@ -15,7 +15,7 @@ class Container extends Component {
       <Fragment>
         <div className="container-fluid">
           <div className="row justify-content-center">
-            <div className="col-3 p-0 brd-right-1-black">
+            <div className="col-3 p-0">
               <Panel />
             </div>
             <div className="col-9 p-0">

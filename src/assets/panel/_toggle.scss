@@ -1,4 +1,9 @@
 #panel {
+    &:hover {
+        .toggle-panel {
+            left: 100% !important;
+        }
+    }
     .toggle-panel {
         background: $bg_app_grey_dark;
         border-top-right-radius: 50%;
@@ -6,10 +11,19 @@
         cursor: pointer;
         display: table;
         height: 50px;
-        left: 100%;
+        left: calc(100% - 25px);
         top: 50%;
         width: 50px;
+        z-index: 1;
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
         transform: translate(-50%);
+        -webkit-transition: left .2s linear, opacity .2s linear;
+        -moz-transition: left .2s linear, opacity .2s linear;
+        transition: left .2s linear, opacity .2s linear;
+        &.z-idx {
+            z-index: 3;
+        }
         i {
             display: table-cell;
             padding-left: 31px;

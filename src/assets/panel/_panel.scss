@@ -1,3 +1,4 @@
+@import 'directories';
 @import 'toggle';
 
 #panel {
@@ -11,5 +12,10 @@
             display: table-cell;
             vertical-align: middle;
         }
+    }
+    .wrapper-text {
+        height: 100%;
+        width: 100%;
+        z-index: 2;
     }
 }
