@@ -2,7 +2,11 @@ import React from 'react';
 
 import Directory from './Directory';
 
+import TRANSLATIONS_GENERAL from '../../translations/general';
+
 const Panel = () => {
+  const lang = localStorage.getItem('lang');
+
   return (
     <aside id="panel" className="p-relative">
       <div className="toggle-panel p-absolute brd-right-1-black brd-right-rad-50">
@@ -11,28 +15,64 @@ const Panel = () => {
       </div>
       <div className="wrapper-text brd-right-1-black p-relative">
         <div className="title">
-          <h5>Project</h5>
+          <h5>{ lang === 'fr' ? TRANSLATIONS_GENERAL.project.fr : TRANSLATIONS_GENERAL.project.en }</h5>
         </div>
         <div className="directories p-relative">
-          <Directory
-            name      = 'Formations'
-            icon      = 'fa-folder-open-o'
+          <Directory iD={ 'directory-formations' } name = { { en: 'Studies',  fr: 'Formations' } } icon = 'fa-folder-open-o'
             entries   = {[
               {
+                icon  : 'fa-book',
+                name  : {
+                  en: '42 School',
+                  fr: 'Ecole 42'
+                }
+              }, {
                 icon  : 'fa-graduation-cap',
-                name  : 'Ecole 42',
-              },
-              {
+                name  : {
+                  en: 'DipHE IT',
+                  fr: 'DUT Info.'
+                }
+              }, {
                 icon  : 'fa-graduation-cap',
-                name  : 'DUT Info.',
-              },
-              {
-                icon  : 'fa-graduation-cap',
-                name  : 'Licence Pro SIL',
-              },
-              {
+                name  : {
+                  en: 'BSC Degree IT',
+                  fr: 'Licence Pro. SIL'
+                }
+              }, {
                 icon  : 'fa-clock-o',
-                name  : 'Mastère Web Dev',
+                name  : {
+                  en: 'Master Web Dev',
+                  fr: 'Mastère Web Dev'
+                },
+              }
+            ]}
+          />
+          <Directory iD={ 'directory-projects' } name = { { en: 'Projects',  fr: 'Projets' } } icon = 'fa-folder-open-o'
+            entries   = {[
+              {
+                icon  : 'fa-forumbee',
+                name  : {
+                  en: 'beeAlive',
+                  fr: 'beeAlive'
+                }
+              }, {
+                icon  : 'fa-street-view',
+                name  : {
+                  en: 'City happiness report',
+                  fr: 'City happiness report'
+                }
+              }, {
+                icon  : 'fa-heart',
+                name  : {
+                  en: 'Porndraw',
+                  fr: 'Porndraw'
+                }
+              }, {
+                icon  : 'fa-rocket',
+                name  : {
+                  en: 'Space 404',
+                  fr: 'Space 404'
+                },
               }
             ]}
           />

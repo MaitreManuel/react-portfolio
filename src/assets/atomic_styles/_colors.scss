@@ -1,0 +1,32 @@
+$sizes: (
+    'html': $icon_html,
+    'eslint': $icon_eslint,
+    'js': $icon_js,
+    'node': $icon_node,
+    'npm': $icon_npm,
+);
+@mixin colors-class() {
+    @each $name, $color in $colors {
+        .color-#{$name} {
+            color: $color;
+        }
+    }
+}
+
+@include colors-class();
+
+.fa-forumbee {
+    color: $icon_html;
+}
+.fa-graduation-cap {
+    color: $icon_webpack;
+}
+.fa-heart {
+    color: $icon_npm;
+}
+.fa-rocket {
+    color: $icon_eslint;
+}
+.fa-street-view {
+    color: $icon_js;
+}

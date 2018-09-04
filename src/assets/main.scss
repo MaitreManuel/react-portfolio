@@ -39,6 +39,10 @@ body {
     overflow: hidden;
     width: 100vw;
 }
-.col-0 {
-    width: 1px;
+.fa {
+    min-width: 18px;
+    text-align: center;
+}
+.fa-angle-bottom, .fa-angle-left, .fa-angle-right, .fa-angle-top {
+    font-weight: bold;
 }

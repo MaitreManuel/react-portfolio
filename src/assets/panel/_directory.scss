@@ -2,17 +2,35 @@
     .directories {
         background: $bg_app_grey_dark;
         height: 100%;
+        * {
+            position: relative;
+            z-index: 10;
+        }
         .directory {
-            display: table;
-            height: 40px;
-            padding-left: 10px;
-            padding-right: 10px;
+            min-height: 40px;
+            overflow: hidden;
+            padding: 9px 10px;
             width: 100%;
+            &.close {
+                height: 40px;
+            }
+            &.open {
+                height: auto;
+            }
             .dropdown {
-                display: table-cell;
-                vertical-align: middle;
-                .drop-icon {
-                    font-weight: bold;
+                cursor: pointer;
+                height: 40px;
+                padding: 9px 10px;
+                * {
+                    cursor: pointer;
+                }
+            }
+            .subs-dropdown {
+                padding-left: 11px;
+                .sub {
+                    cursor: pointer;
+                    height: 40px;
+                    padding: 9px 10px;
                 }
             }
         }
