@@ -6,7 +6,6 @@ domready(() => {
 
 const init_events_panel = () => {
   const col_panel = document.querySelector('.col-panel'),
-    col_tab = document.querySelector('.col-tab'),
     panel = document.querySelector('#panel'),
     panel_toggle = document.querySelector('.toggle-panel');
   let focus = false,
@@ -32,7 +31,12 @@ const init_events_panel = () => {
       }
     });
     panel_toggle.addEventListener('click', () => {
-      if (open === true) { // check only if true not if exist
+      /** check only if true not if exist, because :
+       * open = false
+       * if (open) { }
+       * > output : true
+      **/
+      if (open === true) {
         panel_toggle.querySelector('.fa-angle-left').classList.add('d-none');
         panel_toggle.querySelector('.fa-angle-right').classList.remove('d-none');
         col_panel.classList.add('close');
