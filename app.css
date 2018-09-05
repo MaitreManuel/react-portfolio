@@ -4788,7 +4788,7 @@ template {
 .fa-heart {
   color: #ac4142; }
 
-.fa-linkedin {
+.fa-linkedin-square {
   color: #0077b5; }
 
 .fa-rocket {
@@ -4859,16 +4859,23 @@ footer#footer-page .infobox, footer#footer-page .toolbox {
 
 footer#footer-page .toolbox a {
   font-size: 1.6rem;
-  padding-left: 20px; }
+  padding-left: 10px;
+  padding-right: 10px; }
 
 footer#footer-page .toolbox select {
-  margin-left: 20px; }
+  margin-left: 10px; }
 
 footer#footer-page {
   height: 40px;
   padding: 8px 10px;
   width: 100%;
   z-index: 5; }
+  footer#footer-page .author {
+    color: #999dcc;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%); }
 
 #panel .directories {
   background: #21242b;
