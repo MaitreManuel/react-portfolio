@@ -3,7 +3,7 @@
 
 @media all and (min-width: 992px) {
     #panel {
-        height: 100vh;
+        height: calc(100vh - 40px);
         z-index: 2;
         .title {
             display: table;

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import Footer from './Footer';
 import Panel from './Panel';
 
 const Container = ({ children }) => {
@@ -16,6 +17,7 @@ const Container = ({ children }) => {
           <div className="col-tab">
             { template }
           </div>
+          <Footer />
         </div>
       </div>
     </Fragment>
