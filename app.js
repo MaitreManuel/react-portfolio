@@ -21935,6 +21935,14 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(49);
 
+var _About = __webpack_require__(85);
+
+var _About2 = _interopRequireDefault(_About);
+
+var _Contact = __webpack_require__(86);
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
 var _Home = __webpack_require__(76);
 
 var _Home2 = _interopRequireDefault(_Home);
@@ -21970,6 +21978,8 @@ var Routes = function (_Component) {
           _reactRouterDom.Switch,
           null,
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _About2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/contact', component: _Contact2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { component: _NotFound2.default })
         )
       );
@@ -24613,7 +24623,7 @@ var Home = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'code' },
+          { className: 'content code' },
           _react2.default.createElement(
             'pre',
             null,
@@ -24853,7 +24863,7 @@ exports.default = Footer;
 /* 79 */
 /***/ (function(module, exports) {
 
-module.exports = {"project":{"en":"Project","fr":"Projet"},"source_code":{"en":"Source code","fr":"Code source"}}
+module.exports = {"about":{"en":"About","fr":"À propos de"},"home":{"en":"Home","fr":"Accueil"},"project":{"en":"Project","fr":"Projet"},"source_code":{"en":"Source code","fr":"Code source"}}
 
 /***/ }),
 /* 80 */
@@ -24903,12 +24913,33 @@ var Panel = function Panel() {
       _react2.default.createElement(
         'div',
         { className: 'directories p-relative' },
+        _react2.default.createElement(_Directory2.default, { iD: 'directory-general', name: { en: 'General', fr: 'Général' }, icon: 'fa-folder-open-o', status: 'open',
+          entries: [{
+            icon: 'fa-home',
+            name: {
+              en: 'Home',
+              fr: 'Accueil'
+            }
+          }, {
+            icon: 'fa-address-card-o',
+            name: {
+              en: 'About',
+              fr: 'À propos de'
+            }
+          }, {
+            icon: 'fa-envelope-open-o',
+            name: {
+              en: 'Contact',
+              fr: 'Contact'
+            }
+          }]
+        }),
         _react2.default.createElement(_Directory2.default, { iD: 'directory-formations', name: { en: 'Studies', fr: 'Formations' }, icon: 'fa-folder-open-o',
           entries: [{
             icon: 'fa-book',
             name: {
               en: '42 School',
-              fr: 'Ecole 42'
+              fr: 'École 42'
             }
           }, {
             icon: 'fa-graduation-cap',
@@ -24991,7 +25022,9 @@ var Directory = function Directory(_ref) {
   var iD = _ref.iD,
       name = _ref.name,
       icon = _ref.icon,
-      entries = _ref.entries;
+      entries = _ref.entries,
+      _ref$status = _ref.status,
+      status = _ref$status === undefined ? 'close' : _ref$status;
 
   var toggle_directory = function toggle_directory(iD_directory) {
     var directory = document.querySelector('#' + iD_directory);
@@ -25030,12 +25063,12 @@ var Directory = function Directory(_ref) {
 
   return _react2.default.createElement(
     'div',
-    { id: iD, className: 'directory close', onClick: function onClick() {
-        return toggle_directory(iD);
-      } },
+    { id: iD, className: 'directory ' + status },
     _react2.default.createElement(
       'div',
-      { className: 'dropdown', title: (0, _translations.translations_prop)(name) },
+      { className: 'dropdown', title: (0, _translations.translations_prop)(name), onClick: function onClick() {
+          return toggle_directory(iD);
+        } },
       _react2.default.createElement('i', { className: 'fa fa-angle-right drop-icon', 'aria-hidden': 'true' }),
       '\xA0\xA0',
       _react2.default.createElement('i', { className: 'fa ' + icon, 'aria-hidden': 'true' }),
@@ -25055,10 +25088,11 @@ var Directory = function Directory(_ref) {
 };
 
 Directory.propTypes = {
+  entries: _propTypes2.default.array.isRequired,
   icon: _propTypes2.default.string.isRequired,
   iD: _propTypes2.default.string.isRequired,
   name: _propTypes2.default.object.isRequired,
-  entries: _propTypes2.default.array.isRequired
+  status: _propTypes2.default.string
 };
 
 exports.default = Directory;
@@ -25133,44 +25167,71 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(49);
+
+var _translations = __webpack_require__(18);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Tabs = function Tabs() {
   return _react2.default.createElement(
-    "div",
-    { className: "tabs" },
+    'div',
+    { className: 'tabs' },
     _react2.default.createElement(
-      "div",
-      { className: "tab active" },
+      _reactRouterDom.NavLink,
+      { to: '/', exact: true, className: 'tab-nav-link', activeClassName: 'active' },
       _react2.default.createElement(
-        "div",
-        { className: "close" },
-        _react2.default.createElement("i", { className: "fa fa-times brd-rad-2", "aria-hidden": "true" }),
+        'div',
+        { className: 'tab' },
+        _react2.default.createElement('i', { className: 'fa fa-times brd-rad-2', 'aria-hidden': 'true' }),
         _react2.default.createElement(
-          "div",
-          { className: "title d-table" },
+          'div',
+          { className: 'title d-table' },
           _react2.default.createElement(
-            "h3",
+            'h3',
             null,
-            "Welcome"
+            _react2.default.createElement('i', { className: 'fa fa-home', 'aria-hidden': 'true' }),
+            ' ',
+            (0, _translations.translations_store)('home')
           )
         )
       )
     ),
     _react2.default.createElement(
-      "div",
-      { className: "tab" },
+      _reactRouterDom.NavLink,
+      { to: '/about', className: 'tab-nav-link', activeClassName: 'active' },
       _react2.default.createElement(
-        "div",
-        { className: "close" },
-        _react2.default.createElement("i", { className: "fa fa-times brd-rad-2", "aria-hidden": "true" }),
+        'div',
+        { className: 'tab' },
+        _react2.default.createElement('i', { className: 'fa fa-times brd-rad-2', 'aria-hidden': 'true' }),
         _react2.default.createElement(
-          "div",
-          { className: "title d-table" },
+          'div',
+          { className: 'title d-table' },
           _react2.default.createElement(
-            "h3",
+            'h3',
             null,
-            "Welcome"
+            _react2.default.createElement('i', { className: 'fa fa-address-card-o', 'aria-hidden': 'true' }),
+            ' ',
+            (0, _translations.translations_store)('about')
+          )
+        )
+      )
+    ),
+    _react2.default.createElement(
+      _reactRouterDom.NavLink,
+      { to: '/contact', className: 'tab-nav-link', activeClassName: 'active' },
+      _react2.default.createElement(
+        'div',
+        { className: 'tab' },
+        _react2.default.createElement('i', { className: 'fa fa-times brd-rad-2', 'aria-hidden': 'true' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'title d-table' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            _react2.default.createElement('i', { className: 'fa fa-envelope-open-o', 'aria-hidden': 'true' }),
+            ' Contact'
           )
         )
       )
@@ -25179,6 +25240,130 @@ var Tabs = function Tabs() {
 };
 
 exports.default = Tabs;
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Container = __webpack_require__(77);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_Component) {
+  _inherits(About, _Component);
+
+  function About(props) {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
+  }
+
+  _createClass(About, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _Container2.default,
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'content' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            '\xC0 propos de'
+          )
+        )
+      );
+    }
+  }]);
+
+  return About;
+}(_react.Component);
+
+exports.default = About;
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Container = __webpack_require__(77);
+
+var _Container2 = _interopRequireDefault(_Container);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Contact = function (_Component) {
+  _inherits(Contact, _Component);
+
+  function Contact(props) {
+    _classCallCheck(this, Contact);
+
+    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this, props));
+  }
+
+  _createClass(Contact, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _Container2.default,
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'content' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Contact'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Contact;
+}(_react.Component);
+
+exports.default = Contact;
 
 /***/ })
 /******/ ]);
