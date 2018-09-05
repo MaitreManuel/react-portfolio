@@ -1,4 +1,12 @@
 {
+  "about": {
+    "en": "About",
+    "fr": "À propos de"
+  },
+  "home": {
+    "en": "Home",
+    "fr": "Accueil"
+  },
   "project": {
     "en": "Project",
     "fr": "Projet"

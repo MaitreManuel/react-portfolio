@@ -1,0 +1,11 @@
+@import 'code';
+@import 'tab';
+
+.col-tab {
+    .wrapper-content {
+        .content {
+            background: $bg_tab_grey_medium;
+            height: calc(100% - 40px);
+        }
+    }
+}

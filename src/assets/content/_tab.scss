@@ -19,14 +19,6 @@
                         opacity: 1 !important;
                     }
                 }
-                &:not(.active) {
-                    border-bottom: solid 1px $black;
-                    cursor: pointer;
-                }
-                &.active {
-                    background: $bg_tab_grey_medium;
-                    border-left: solid 2px $blue;
-                }
                 .fa-times {
                     color: $text_color_hover;
                     cursor: pointer;
@@ -47,6 +39,9 @@
                         background: $blue;
                         color: $bg_tab_grey_medium;
                     }
+                    &::before {
+                        margin-left: 2px;
+                    }
                 }
                 .title {
                     height: 40px;
@@ -55,6 +50,25 @@
                         display: table-cell;
                         font-size: 1.6rem;
                         vertical-align: middle;
+                    }
+                }
+            }
+            .tab-nav-link {
+                &:hover {
+                    color: $text_color;
+                }
+                &.active {
+                    cursor: default;
+                    .tab {
+                        background: $bg_tab_grey_medium;
+                        border-left: solid 2px $blue;
+                    }
+                }
+                &:not(.active) {
+                    cursor: pointer;
+                    .tab {
+                        border-bottom: solid 1px $black;
+                        cursor: pointer;
                     }
                 }
             }

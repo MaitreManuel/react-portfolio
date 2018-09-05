@@ -15,13 +15,36 @@ const Panel = () => {
           <h5>{ translations_store('project') }</h5>
         </div>
         <div className="directories p-relative">
+          <Directory iD={ 'directory-general' } name = { { en: 'General',  fr: 'Général' } } icon = 'fa-folder-open-o' status = 'open'
+            entries   = {[
+              {
+                icon  : 'fa-home',
+                name  : {
+                  en: 'Home',
+                  fr: 'Accueil'
+                }
+              }, {
+                icon  : 'fa-address-card-o',
+                name  : {
+                  en: 'About',
+                  fr: 'À propos de'
+                }
+              }, {
+                icon  : 'fa-envelope-open-o',
+                name  : {
+                  en: 'Contact',
+                  fr: 'Contact'
+                }
+              },
+            ]}
+          />
           <Directory iD={ 'directory-formations' } name = { { en: 'Studies',  fr: 'Formations' } } icon = 'fa-folder-open-o'
             entries   = {[
               {
                 icon  : 'fa-book',
                 name  : {
                   en: '42 School',
-                  fr: 'Ecole 42'
+                  fr: 'École 42'
                 }
               }, {
                 icon  : 'fa-graduation-cap',

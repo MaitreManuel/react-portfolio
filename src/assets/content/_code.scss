@@ -1,8 +1,6 @@
 .col-tab {
     .wrapper-content {
         .code {
-            background: $bg_tab_grey_medium;
-            height: calc(100% - 40px);
             pre {
                 span {
                     display: block;
@@ -17,6 +15,12 @@
                         position: absolute;
                         text-align: right;
                         width: 32px;
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
                     }
                 }
             }

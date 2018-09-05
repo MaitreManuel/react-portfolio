@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { translations_prop } from '../../assets/tools/functions/translations';
 
-const Directory = ({ iD, name, icon, entries }) => {
+const Directory = ({ iD, name, icon, entries, status = 'close' }) => {
   const toggle_directory = iD_directory => {
     const directory = document.querySelector(`#${ iD_directory }`);
 
@@ -35,8 +35,8 @@ const Directory = ({ iD, name, icon, entries }) => {
   }
 
   return (
-    <div id={ iD } className="directory close" onClick={ () => toggle_directory(iD) }>
-      <div className="dropdown" title={ translations_prop(name) }>
+    <div id={ iD } className={ 'directory '+ status }>
+      <div className="dropdown" title={ translations_prop(name) } onClick={ () => toggle_directory(iD) }>
         <i className="fa fa-angle-right drop-icon" aria-hidden="true"></i>
         &nbsp;&nbsp;
         <i className={ 'fa '+ icon } aria-hidden="true"></i>
@@ -51,10 +51,11 @@ const Directory = ({ iD, name, icon, entries }) => {
 };
 
 Directory.propTypes = {
+  entries     : PropTypes.array.isRequired,
   icon        : PropTypes.string.isRequired,
   iD          : PropTypes.string.isRequired,
   name        : PropTypes.object.isRequired,
-  entries     : PropTypes.array.isRequired,
+  status      : PropTypes.string,
 };
 
 export default Directory;

@@ -22,10 +22,10 @@ $sizes: (
 .fa-forumbee {
     color: $icon_html;
 }
-.fa-graduation-cap {
+.fa-address-card-o, .fa-graduation-cap {
     color: $icon_webpack;
 }
-.fa-heart {
+.fa-heart, .fa-home {
     color: $icon_npm;
 }
 .fa-linkedin-square {
@@ -34,7 +34,7 @@ $sizes: (
 .fa-rocket {
     color: $icon_eslint;
 }
-.fa-street-view {
+.fa-envelope-open-o, .fa-street-view {
     color: $icon_js;
 }
 .fa-twitter {
