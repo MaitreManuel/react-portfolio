@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const Footer = () => {
   return (
@@ -8,9 +7,5 @@ const Footer = () => {
     </footer>
   );
 }
-
-Footer.propTypes = {
-  children     : PropTypes.node,
-};
 
 export default Footer;

@@ -1,12 +1,9 @@
 import React from 'react';
 
 import Directory from './Directory';
-
-import TRANSLATIONS_GENERAL from '../../translations/general';
+import { translations_store } from '../../assets/tools/functions/translations';
 
 const Panel = () => {
-  const lang = localStorage.getItem('lang');
-
   return (
     <aside id="panel" className="p-relative">
       <div className="toggle-panel p-absolute brd-right-1-black brd-right-rad-50">
@@ -15,7 +12,7 @@ const Panel = () => {
       </div>
       <div className="wrapper-text brd-right-1-black p-relative">
         <div className="title">
-          <h5>{ lang === 'fr' ? TRANSLATIONS_GENERAL.project.fr : TRANSLATIONS_GENERAL.project.en }</h5>
+          <h5>{ translations_store('project') }</h5>
         </div>
         <div className="directories p-relative">
           <Directory iD={ 'directory-formations' } name = { { en: 'Studies',  fr: 'Formations' } } icon = 'fa-folder-open-o'
