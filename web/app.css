@@ -4788,11 +4788,17 @@ template {
 .fa-heart {
   color: #ac4142; }
 
+.fa-linkedin {
+  color: #0077b5; }
+
 .fa-rocket {
   color: #aa759f; }
 
 .fa-street-view {
   color: #f4bf75; }
+
+.fa-twitter {
+  color: #1da1f2; }
 
 .p-absolute {
   position: absolute; }
@@ -4818,6 +4824,16 @@ template {
 .p-unset {
   position: unset; }
 
+a {
+  color: #c8cae3;
+  -webkit-transition: color .2s linear;
+  -moz-transition: color .2s linear;
+  transition: color .2s linear; }
+  a i {
+    padding-right: 4px; }
+  a:hover {
+    color: #999dcc; }
+
 button {
   background: none;
   border: none;
@@ -4836,10 +4852,17 @@ select {
     select option:hover {
       background: #292c33; }
 
-footer#footer-page .toolbox {
+footer#footer-page .infobox, footer#footer-page .toolbox {
   display: table; }
-  footer#footer-page .toolbox * {
+  footer#footer-page .infobox *, footer#footer-page .toolbox * {
     display: table-cell; }
+
+footer#footer-page .toolbox a {
+  font-size: 1.6rem;
+  padding-left: 20px; }
+
+footer#footer-page .toolbox select {
+  margin-left: 20px; }
 
 footer#footer-page {
   height: 40px;

@@ -1,0 +1,12 @@
+a {
+    color: $text_color;
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    transition: color .2s linear;
+    i {
+        padding-right: 4px;
+    }
+    &:hover {
+        color: $text_color_hover;
+    }
+}

@@ -1,9 +1,13 @@
 $sizes: (
-    'html': $icon_html,
     'eslint': $icon_eslint,
+    'html': $icon_html,
+    'linkedin': $icon_linkedin,
     'js': $icon_js,
     'node': $icon_node,
     'npm': $icon_npm,
+    'twitter': $icon_twitter,
+    'sass': $icon_sass,
+    'webpack': $icon_webpack,
 );
 @mixin colors-class() {
     @each $name, $color in $colors {
@@ -24,9 +28,15 @@ $sizes: (
 .fa-heart {
     color: $icon_npm;
 }
+.fa-linkedin {
+    color: $icon_linkedin;
+}
 .fa-rocket {
     color: $icon_eslint;
 }
 .fa-street-view {
     color: $icon_js;
+}
+.fa-twitter {
+    color: $icon_twitter;
 }

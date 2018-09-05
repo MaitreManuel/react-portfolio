@@ -2,5 +2,9 @@
   "project": {
     "en": "Project",
     "fr": "Projet"
+  },
+  "source_code": {
+    "en": "Source code",
+    "fr": "Code source"
   }
 }

@@ -1,0 +1,17 @@
+footer#footer-page {
+    .infobox, .toolbox {
+        display: table;
+        * {
+            display: table-cell;
+        }
+    }
+    .toolbox {
+        a {
+            font-size: 1.6rem;
+            padding-left: 20px;
+        }
+        select {
+            margin-left: 20px;
+        }
+    }
+}
