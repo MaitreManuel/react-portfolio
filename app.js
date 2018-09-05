@@ -24681,27 +24681,69 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _translations = __webpack_require__(30);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Footer = function Footer() {
   return _react2.default.createElement(
-    "footer",
-    { id: "footer-page", className: "brd-top-1-black p-relative" },
+    'footer',
+    { id: 'footer-page', className: 'brd-top-1-black p-relative' },
     _react2.default.createElement(
-      "div",
-      { className: "toolbox ml-auto" },
+      'div',
+      { className: 'container-fluid' },
       _react2.default.createElement(
-        "select",
-        { name: "lang" },
+        'div',
+        { className: 'row' },
         _react2.default.createElement(
-          "option",
-          { value: "fr" },
-          "FR"
+          'div',
+          { className: 'col-6' },
+          _react2.default.createElement(
+            'div',
+            { className: 'infobox' },
+            _react2.default.createElement(
+              'a',
+              { href: 'https://github.com/MaitreManuel/react-portfolio', target: '_blank', rel: 'noopener noreferrer', title: (0, _translations.translations_store)('source_code') },
+              _react2.default.createElement('i', { className: 'fa fa-github', 'aria-hidden': 'true' }),
+              _react2.default.createElement(
+                'span',
+                null,
+                (0, _translations.translations_store)('source_code')
+              )
+            )
+          )
         ),
         _react2.default.createElement(
-          "option",
-          { value: "en" },
-          "EN"
+          'div',
+          { className: 'col-6' },
+          _react2.default.createElement(
+            'div',
+            { className: 'toolbox ml-auto' },
+            _react2.default.createElement(
+              'a',
+              { href: 'https://www.linkedin.com/in/trystan-eveno/', target: '_blank', rel: 'noopener noreferrer', title: 'LinkedIn Trystan Eveno' },
+              _react2.default.createElement('i', { className: 'fa fa-linkedin-square', 'aria-hidden': 'true' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { href: 'https://twitter.com/Maitre_Manuel', target: '_blank', rel: 'noopener noreferrer', title: 'Twitter @Maitre_Manuel' },
+              _react2.default.createElement('i', { className: 'fa fa-twitter', 'aria-hidden': 'true' })
+            ),
+            _react2.default.createElement(
+              'select',
+              { className: 'mr-0', name: 'lang' },
+              _react2.default.createElement(
+                'option',
+                { value: 'fr' },
+                'FR'
+              ),
+              _react2.default.createElement(
+                'option',
+                { value: 'en' },
+                'EN'
+              )
+            )
+          )
         )
       )
     )
@@ -24922,7 +24964,7 @@ exports.default = Directory;
 /* 80 */
 /***/ (function(module, exports) {
 
-module.exports = {"project":{"en":"Project","fr":"Projet"}}
+module.exports = {"project":{"en":"Project","fr":"Projet"},"source_code":{"en":"Source code","fr":"Code source"}}
 
 /***/ }),
 /* 81 */
