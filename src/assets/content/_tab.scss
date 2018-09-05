@@ -1,0 +1,63 @@
+.col-tab {
+    .wrapper-content {
+        font-size: 1.3rem;
+        height: 100%;
+        line-height: 1.5;
+        width: 100%;
+        .tabs {
+            height: 40px;
+            max-width: 100%;
+            width: 100%;
+            .tab {
+                border-right: solid 1px $black;
+                display: inline-block;
+                height: 40px;
+                position: relative;
+                width: 275px;
+                &:hover {
+                    .fa-times {
+                        opacity: 1 !important;
+                    }
+                }
+                &:not(.active) {
+                    border-bottom: solid 1px $black;
+                    cursor: pointer;
+                }
+                &.active {
+                    background: $bg_tab_grey_medium;
+                    border-left: solid 2px $blue;
+                }
+                .fa-times {
+                    color: $text_color_hover;
+                    cursor: pointer;
+                    height: 14px;
+                    opacity: 0;
+                    min-width: 14px !important;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    width: 14px;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    -webkit-transition: background .2s linear, color .2s linear, opacity .2s linear;
+                    -moz-transition: background .2s linear, color .2s linear, opacity .2s linear;
+                    transition: background .2s linear, color .2s linear, opacity .2s linear;
+                    &:hover {
+                        background: $blue;
+                        color: $bg_tab_grey_medium;
+                    }
+                }
+                .title {
+                    height: 40px;
+                    margin: 0 auto;
+                    h3 {
+                        display: table-cell;
+                        font-size: 1.6rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.col-tab {
+    .wrapper-content {
+        .code {
+            background: $bg_tab_grey_medium;
+            height: calc(100% - 40px);
+            pre {
+                span {
+                    display: block;
+                    counter-increment: line;
+                    line-height: 1.6rem;
+                    margin-left: 42px;
+                    &:before {
+                        color: rgba($text_color_hover, .7);
+                        content: counter(line);
+                        left: -5px;
+                        padding-right: 5px;
+                        position: absolute;
+                        text-align: right;
+                        width: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

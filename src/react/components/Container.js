@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 
 import Footer from './Footer';
 import Panel from './Panel';
+import Tabs from './Tabs';
 
 const Container = ({ children }) => {
   const template = children;
@@ -15,7 +16,10 @@ const Container = ({ children }) => {
             <Panel />
           </div>
           <div className="col-tab p-relative">
-            { template }
+            <div className="wrapper-content">
+              <Tabs />
+              { template }
+            </div>
           </div>
           <Footer />
         </div>

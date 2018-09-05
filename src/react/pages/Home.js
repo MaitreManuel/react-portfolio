@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Container from '../components/Container';
-import Tab from '../components/Tab';
 
 class Home extends Component {
   constructor(props) {
@@ -11,11 +10,20 @@ class Home extends Component {
   render() {
     return (
       <Container>
-        <Tab>
-          <section id="Home" className="tab">
-            <h1>Home</h1>
-          </section>
-        </Tab>
+        <div className="code">
+          <pre>
+            <span>a</span>
+            <span>z</span>
+            <span>e</span>
+            <span>r</span>
+            <span>t</span>
+            <span>y</span>
+            <span>u</span>
+            <span>i</span>
+            <span>o</span>
+            <span>p</span>
+          </pre>
+        </div>
       </Container>
     );
   }
