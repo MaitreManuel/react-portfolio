@@ -6,10 +6,11 @@ const Tab = ({ children }) => {
 
   return (
     <Fragment>
-      <div className="container-fluid">
-        <div className="row justify-content-center">
-          
-        </div>
+      <div className="layout-background p-absolute">
+
+      </div>
+      <div className="wrapper-content p-relative">
+        { template }
       </div>
     </Fragment>
   );

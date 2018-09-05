@@ -14,7 +14,7 @@ const Container = ({ children }) => {
           <div className="col-panel">
             <Panel />
           </div>
-          <div className="col-tab">
+          <div className="col-tab p-relative">
             { template }
           </div>
           <Footer />

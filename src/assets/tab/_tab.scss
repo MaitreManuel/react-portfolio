@@ -1,5 +1,14 @@
-.tab {
-    background: $bg_tab_grey_medium;
-    height: 100%;
-    width: 100%;
+.col-tab {
+    .layout-background {
+        background: $bg_tab_grey_medium;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    .wrapper-content {
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
 }
