@@ -14,11 +14,13 @@
 @import '~bootstrap/scss/utilities/spacing';
 // bootstrap components
 @import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/dropdown';
 // Font-Awesome
 @import '~font-awesome/scss/font-awesome';
 // custom style
 @import 'atomic_styles/atomic_styles';
 @import 'components/button';
+@import 'components/select';
 @import 'footer/footer';
 @import 'panel/panel';
 @import 'tab/tab';

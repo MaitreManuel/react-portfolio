@@ -1,0 +1,8 @@
+footer#footer-page {
+    .toolbox {
+        display: table;
+        * {
+            display: table-cell;
+        }
+    }
+}
