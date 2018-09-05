@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer id="footer-page" className="brd-top-1-black p-relative">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row p-relative">
           <div className="col-6">
             <div className="infobox">
               <a href="https://github.com/MaitreManuel/react-portfolio" target="_blank" rel="noopener noreferrer" title={ translations_store('source_code') }>
@@ -14,6 +14,9 @@ const Footer = () => {
                 <span>{ translations_store('source_code') }</span>
               </a>
             </div>
+          </div>
+          <div className="author p-absolute">
+            <span><i className="fa fa-copyright" aria-hidden="true"></i>{ (new Date()).getFullYear() } - Trystan Eveno</span>
           </div>
           <div className="col-6">
             <div className="toolbox ml-auto">

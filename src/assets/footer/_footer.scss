@@ -5,4 +5,11 @@ footer#footer-page {
     padding: 8px 10px;
     width: 100%;
     z-index: 5;
+    .author {
+        color: $text_color_hover;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
 }
