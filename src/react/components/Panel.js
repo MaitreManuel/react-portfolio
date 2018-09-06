@@ -24,12 +24,6 @@ const Panel = () => {
                   fr: 'Accueil'
                 }
               }, {
-                icon  : 'fa-address-card-o',
-                name  : {
-                  en: 'About',
-                  fr: 'À propos de'
-                }
-              }, {
                 icon  : 'fa-envelope-open-o',
                 name  : {
                   en: 'Contact',

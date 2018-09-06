@@ -25,7 +25,7 @@ class Home extends Component {
 
     for (let i = 0; i < nb_lines; i++) {
       lines_generate.push(
-        <span key={ 'line-'+ i }>&nbsp;</span>
+        <span key={ 'line-'+ i }><br /></span>
       );
     }
 

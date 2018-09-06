@@ -3,6 +3,13 @@ import React from 'react';
 import { translations_store } from '../../assets/tools/functions/translations';
 
 const Footer = () => {
+  const change_lang = e => {
+    if (e.target.value !== localStorage.getItem('lang')) {
+      localStorage.setItem('lang', e.target.value);
+      location.reload();
+    }
+  };
+
   return (
     <footer id="footer-page" className="brd-top-1-black p-relative">
       <div className="container-fluid">
@@ -26,7 +33,7 @@ const Footer = () => {
               <a href="https://twitter.com/Maitre_Manuel" target="_blank" rel="noopener noreferrer" title="Twitter @Maitre_Manuel">
                 <i className="fa fa-twitter" aria-hidden="true"></i>
               </a>
-              <select className="mr-0" name="lang">
+              <select className="mr-0" name="lang" defaultValue={ localStorage.getItem('lang') } onChange={ e => change_lang(e) }>
                 <option value="fr">FR</option>
                 <option value="en">EN</option>
               </select>
