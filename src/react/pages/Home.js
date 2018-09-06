@@ -20,7 +20,7 @@ class Home extends Component {
   }
 
   generateFakeLineNumber(template) {
-    const nb_lines = Math.ceil((document.documentElement.offsetHeight - 80) / 16) - template.props.children.length - 2;
+    const nb_lines = Math.floor((document.documentElement.offsetHeight - 80) / 16) - template.props.children.length;
     let lines_generate = [];
 
     for (let i = 0; i < nb_lines; i++) {

@@ -6,6 +6,9 @@
         .content {
             background: $bg_tab_grey_medium;
             height: calc(100% - 40px);
+            pre {
+                margin: 0;
+            }
         }
     }
 }
