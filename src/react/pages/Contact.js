@@ -15,21 +15,37 @@ class Contact extends Component {
         <div id="Contact" className="content">
           <div className="top">
             <h1>{ translations_store('contact.title') }</h1>
-            <button className="btn btn-primary" role="button">Mail</button>
+            <button className="btn btn-primary" role="button">{ translations_store('contact.mail') }</button>
           </div>
           <div className="wrapper-atom">
-            <div>
-              <div></div>
+            <div className="wrap">
+              <div className="circle horizontal c1">
+                <div className="wrap-electron">
+                  <div className="circle electron"></div>
+                </div>
+              </div>
+              <div className="circle vertical c1">
+                <div className="wrap-electron">
+                  <div className="circle electron"></div>
+                </div>
+              </div>
             </div>
-            <div>
-              <div></div>
+            <div className="wrap r">
+              <div className="circle horizontal c2">
+                <div className="wrap-electron">
+                  <div className="circle electron"></div>
+                </div>
+              </div>
+              <div className="circle vertical c2">
+                <div className="wrap-electron">
+                  <div className="circle electron"></div>
+                </div>
+              </div>
+              <div className="circle center"></div>
             </div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
+          </div>
+          <div className="bottom">
+            <h3>{ translations_store('contact.social_network') }</h3>
           </div>
         </div>
       </Container>

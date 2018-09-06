@@ -11,6 +11,14 @@
     "en": "Want to chat with me ?",
     "fr": "Envie de me contacter ?"
   },
+  "contact.mail": {
+    "en": "By mail",
+    "fr": "Par mail"
+  },
+  "contact.social_network": {
+    "en": "Or by socials networks !",
+    "fr": "Ou par les réseaux sociaux !"
+  },
   "home": {
     "en": "Home",
     "fr": "Accueil"
