@@ -5,8 +5,9 @@ import { translations_store } from '../../assets/tools/functions/translations';
 const Footer = () => {
   const change_lang = e => {
     if (e.target.value !== localStorage.getItem('lang')) {
+      sessionStorage.removeItem('pages');
       localStorage.setItem('lang', e.target.value);
-      location.reload();
+      location.href = location.origin + location.pathname;
     }
   };
 
