@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           <div className="col-6">
             <div className="toolbox ml-auto">
-              <a href="https://www.linkedin.com/in/trystan-eveno/" target="_blank" rel="noopener noreferrer" title="LinkedIn Trystan Eveno">
+              <a href="https://www.linkedin.com/in/trystan-eveno" target="_blank" rel="noopener noreferrer" title="LinkedIn Trystan Eveno">
                 <i className="fa fa-linkedin-square" aria-hidden="true"></i>
               </a>
               <a href="https://twitter.com/Maitre_Manuel" target="_blank" rel="noopener noreferrer" title="Twitter @Maitre_Manuel">

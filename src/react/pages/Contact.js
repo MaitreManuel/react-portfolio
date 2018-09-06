@@ -17,7 +17,7 @@ class Contact extends Component {
             <h1>{ translations_store('contact.title') }</h1>
             <button className="btn btn-primary" role="button">{ translations_store('contact.mail') }</button>
           </div>
-          <div className="wrapper-atom">
+          <div className="wrapper-atom" title="Animation Atom Electrons">
             <div className="wrap">
               <div className="circle horizontal c1">
                 <div className="wrap-electron">
@@ -46,6 +46,17 @@ class Contact extends Component {
           </div>
           <div className="bottom">
             <h3>{ translations_store('contact.social_network') }</h3>
+            <div className="mt-5">
+              <a href="https://github.com/MaitreManuel" className="px-5" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-github fa-3x" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/trystan-eveno" className="px-5" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/Maitre_Manuel" className="px-5" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-twitter fa-3x" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
         </div>
       </Container>
