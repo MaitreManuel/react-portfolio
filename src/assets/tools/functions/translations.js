@@ -1,4 +1,4 @@
-import TRANSLATIONS_GENERAL from '../../../translations/general';
+import TRANSLATIONS from '../../../translations/general';
 
 export const translations_prop = entry => {
   let buffer = '';
@@ -18,9 +18,9 @@ export const translations_store = key => {
   const lang = localStorage.getItem('lang');
 
   if (lang === 'en') {
-    buffer = TRANSLATIONS_GENERAL[key].en;
+    buffer = TRANSLATIONS[key].en;
   } else {
-    buffer = TRANSLATIONS_GENERAL[key].fr;
+    buffer = TRANSLATIONS[key].fr;
   }
 
   return buffer;

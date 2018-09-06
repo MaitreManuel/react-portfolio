@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Container from '../components/Container';
 
+import { translations_store } from '../../assets/tools/functions/translations';
+
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -10,8 +12,25 @@ class Contact extends Component {
   render() {
     return (
       <Container>
-        <div className="content">
-          <h1>Contact</h1>
+        <div id="Contact" className="content">
+          <div className="top">
+            <h1>{ translations_store('contact.title') }</h1>
+            <button className="btn btn-primary" role="button">Mail</button>
+          </div>
+          <div className="wrapper-atom">
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+          </div>
         </div>
       </Container>
     );

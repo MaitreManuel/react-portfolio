@@ -9,7 +9,6 @@ class Home extends Component {
     const template = this.preRendering(),
       lines = this.generateFakeLineNumber(template);
 
-    // binding
     this.generateFakeLineNumber   = this.generateFakeLineNumber.bind(this);
     this.preRendering             = this.preRendering.bind(this);
 

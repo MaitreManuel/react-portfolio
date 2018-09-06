@@ -1,9 +1,21 @@
-button {
-    background: none;
-    border: none;
-    color: $text_color;
+button.btn {
+    border-radius: 2px;
+    height: 30px;
+    min-width: 100px;
     cursor: pointer;
-    &:active, &:focus, &:hover {
-        outline: none;
+    &.btn-primary {
+        background: $blue;
+        border: solid 1px $blue;
+        color: $text_color;
+        -webkit-transition: background .2s linear, color .2s linear;
+        -moz-transition: background .2s linear, color .2s linear;
+        transition: background .2s linear, color .2s linear;
+        &:active {
+            background: $blue !important;
+            color: $black;
+        }
+        &:focus, &:hover {
+            background: transparent;
+        }
     }
 }
