@@ -18,12 +18,14 @@ const Panel = () => {
           <Directory iD={ 'directory-general' } name = { { en: 'General',  fr: 'Général' } } icon = 'fa-folder-open-o' status = 'open'
             entries   = {[
               {
+                path  : '/',
                 icon  : 'fa-home',
                 name  : {
                   en: 'Home',
                   fr: 'Accueil'
                 }
               }, {
+                path  : '/contact',
                 icon  : 'fa-envelope-open-o',
                 name  : {
                   en: 'Contact',
@@ -32,27 +34,31 @@ const Panel = () => {
               },
             ]}
           />
-          <Directory iD={ 'directory-formations' } name = { { en: 'Studies',  fr: 'Formations' } } icon = 'fa-folder-open-o'
+          <Directory iD={ 'directory-formations' } name = { { en: 'Studies',  fr: 'Formations' } } icon = 'fa-folder-open-o' status = 'open'
             entries   = {[
               {
+                path  : '/school-42',
                 icon  : 'fa-book',
                 name  : {
                   en: '42 School',
                   fr: 'École 42'
                 }
               }, {
+                path  : '/dut-info',
                 icon  : 'fa-graduation-cap',
                 name  : {
                   en: 'DipHE IT',
                   fr: 'DUT Info.'
                 }
               }, {
+                path  : '/lp-sil',
                 icon  : 'fa-graduation-cap',
                 name  : {
                   en: 'BSC Degree IT',
                   fr: 'Licence Pro. SIL'
                 }
               }, {
+                path  : '/master-dw',
                 icon  : 'fa-clock-o',
                 name  : {
                   en: 'Master Web Dev',
@@ -61,27 +67,31 @@ const Panel = () => {
               }
             ]}
           />
-          <Directory iD={ 'directory-projects' } name = { { en: 'Projects',  fr: 'Projets' } } icon = 'fa-folder-open-o'
+          <Directory iD={ 'directory-projects' } name = { { en: 'Projects',  fr: 'Projets' } } icon = 'fa-folder-open-o' status = 'open'
             entries   = {[
               {
+                path  : '/bee-alive',
                 icon  : 'fa-forumbee',
                 name  : {
                   en: 'beeAlive',
                   fr: 'beeAlive'
                 }
               }, {
+                path  : '/city-happiness-report',
                 icon  : 'fa-street-view',
                 name  : {
                   en: 'City happiness report',
                   fr: 'City happiness report'
                 }
               }, {
+                path  : '/porndraw',
                 icon  : 'fa-heart',
                 name  : {
                   en: 'Porndraw',
                   fr: 'Porndraw'
                 }
               }, {
+                path  : '/space-404',
                 icon  : 'fa-rocket',
                 name  : {
                   en: 'Space 404',

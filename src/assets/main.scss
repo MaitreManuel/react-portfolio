@@ -17,6 +17,8 @@
 @import '~bootstrap/scss/dropdown';
 // Font-Awesome
 @import '~font-awesome/scss/font-awesome';
+// SimpleBar
+@import '~simplebar/dist/simplebar.min.css';
 // custom style
 @import 'atomic_styles/atomic_styles';
 @import 'components/anchor';
@@ -28,6 +30,33 @@
 @import 'contact/contact';
 @import 'panel/panel';
 
+::selection {
+    background: $blue;
+    color: $text_color;
+}
+::-moz-selection {
+    background: $blue;
+    color: $text_color;
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    border: 0 solid $black;
+    &:horizontal { border-bottom-width: 1px; }
+    &:vertical { border-right-width: 1px; }
+}
+::-webkit-scrollbar-thumb {
+    border: 0px solid $black;
+    &:horizontal {
+        border-bottom-width: 8px;
+        &:hover { border-bottom-width: 4px; }
+    }
+    &:vertical {
+        border-right-width: 8px;
+        &:hover { border-right-width: 4px; }
+    }
+}
 html {
     font-size: 10px;
 }

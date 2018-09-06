@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { translations_store } from '../../assets/tools/functions/translations';
+import {translations_prop, translations_store} from '../../assets/tools/functions/translations';
 import { is_json_valid } from '../../assets/tools/functions/utils';
 
 const Tabs = () => {
@@ -32,7 +32,7 @@ const Tabs = () => {
       buffer.push(
         <NavLink key={ page.name } to={ page.path } exact className="tab-nav-link" activeClassName="active">
           <div className="tab">
-            <i className="fa fa-times brd-rad-2" aria-hidden="true"></i>
+            <i className="fa fa-times brd-rad-2" aria-hidden="true" onClick={ () => remove_tab(page.path) }></i>
             <div className="title d-table">
               <h3><i className={ 'fa '+ page.icon } aria-hidden="true"></i> { page.name }</h3>
             </div>
@@ -43,12 +43,25 @@ const Tabs = () => {
 
     return buffer;
   };
+  const remove_tab = path => {
+    let pages = JSON.parse(sessionStorage.getItem('pages'));
+
+    for (let i = 0; i < pages.length; i++) {
+      if (pages[i].path === path) {
+        pages.splice(i, 1);
+      }
+    }
+
+    sessionStorage.setItem('pages', JSON.stringify(pages));
+  };
 
   let template = check_pages();
 
   return (
-    <div className="tabs">
-      { template }
+    <div data-simplebar data-simplebar-auto-hide="true" className="wrapper-tabs">
+      <div className="tabs">
+        { template }
+      </div>
     </div>
   );
 };

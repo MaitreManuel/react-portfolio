@@ -7,7 +7,7 @@
         }
         &:not(:hover) {
             .toggle-panel {
-                z-index: 1 !important;
+                z-index: 10 !important;
             }
         }
         .toggle-panel {
@@ -28,7 +28,7 @@
             -moz-transition: left .2s linear, opacity .2s linear;
             transition: left .2s linear, opacity .2s linear;
             &.z-idx {
-                z-index: 3;
+                z-index: 30;
             }
             i {
                 display: table-cell;

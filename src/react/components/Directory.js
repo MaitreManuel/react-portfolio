@@ -1,8 +1,32 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import { translations_prop } from '../../assets/tools/functions/translations';
 
 const Directory = ({ iD, name, icon, entries, status = 'close' }) => {
+  const add_tab = entry => {
+    let is_already_a_tab = false,
+      pages = JSON.parse(sessionStorage.getItem('pages'));
+
+    for (let i = 0; i < pages.length; i++) {
+      if (pages[i].path === entry.path) {
+        is_already_a_tab = true;
+      }
+    }
+
+    if (is_already_a_tab === false) {
+      pages.push(
+        {
+          icon: entry.icon,
+          name: translations_prop(entry.name),
+          path: entry.path
+        }
+      );
+    }
+
+    sessionStorage.setItem('pages', JSON.stringify(pages));
+  };
   const toggle_directory = iD_directory => {
     const directory = document.querySelector(`#${ iD_directory }`);
 
@@ -24,13 +48,15 @@ const Directory = ({ iD, name, icon, entries, status = 'close' }) => {
     let entry = entries[i];
 
     entries_dom.push(
-      <div key={ entry.name.en } className="sub" title={ translations_prop(entry.name) }>
-        <i className="fa fa-angle-right drop-icon" aria-hidden="true"></i>
-        &nbsp;&nbsp;
-        <i className={ 'fa '+ entry.icon } aria-hidden="true"></i>
-        &nbsp;
-        <span>{ translations_prop(entry.name) }</span>
-      </div>
+      <NavLink key={ entry.name.en } exact to={ entry.path } className="project-nav-link" activeClassName="active" onClick={ () => add_tab(entry) }>
+        <div className="sub" title={ translations_prop(entry.name) }>
+          <i className="fa fa-angle-right drop-icon" aria-hidden="true"></i>
+          &nbsp;&nbsp;
+          <i className={ 'fa '+ entry.icon } aria-hidden="true"></i>
+          &nbsp;
+          <span>{ translations_prop(entry.name) }</span>
+        </div>
+      </NavLink>
     );
   }
 

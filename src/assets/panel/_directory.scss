@@ -9,7 +9,8 @@
         .directory {
             min-height: 35px;
             overflow: hidden;
-            padding: 7px 10px;
+            padding-bottom: 7px;
+            padding-top: 7px;
             width: 100%;
             -webkit-transition: max-height .2s linear;
             -moz-transition: max-height .2s linear;
@@ -31,11 +32,29 @@
                 }
             }
             .subs-dropdown {
-                padding-left: 11px;
-                .sub {
-                    cursor: pointer;
-                    height: 35px;
-                    padding: 7px 10px;
+                .project-nav-link {
+                    &:hover {
+                        color: $text_color;
+                        text-decoration: none;
+                    }
+                    &.active {
+                        .sub {
+                            background: $bg_tab_grey_medium;
+                            border-left: solid 2px $blue;
+                        }
+                    }
+                    .sub {
+                        cursor: pointer;
+                        height: 35px;
+                        padding: 7px 10px;
+                        padding-left: 28px;
+                        -webkit-transition: background-color .2s linear;
+                        -moz-transition: background-color .2s linear;
+                        transition: background-color .2s linear;
+                        &:hover {
+                            background: $bg_tab_grey_medium;
+                        }
+                    }
                 }
             }
         }

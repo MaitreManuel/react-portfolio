@@ -5,3 +5,5 @@ import './main.scss';
 import './footer/footer';
 import './panel/panel';
 
+// libs
+import 'simplebar';
