@@ -1,0 +1,95 @@
+.swal2-contentwrapper,
+.swal2-container {
+    -webkit-animation: backdropAnimation linear 250ms forwards;
+    -moz-animation: backdropAnimation linear 250ms forwards;
+    animation: backdropAnimation linear 250ms forwards;
+    &.no-background {
+        button {
+            border: $text_color solid 2px !important;
+            background: transparent !important;
+        }
+        .swal2-content {
+            line-height: 1.75;
+        }
+        .swal2-modal {
+            background-color: transparent !important;
+        }
+        .swal2-title, .swal2-content {
+            color: $text_color;
+        }
+    }
+    button, input, textarea, .swal2-contentwrapper {
+        font-family: $roboto;
+    }
+    button {
+        border-radius: 2px !important;
+        font-size: 1.6rem !important;
+        height: 40px;
+        min-width: 125px;
+        padding: 0 !important;
+        text-align: center !important;
+        -webkit-transition: background .2s linear, color .2s linear;
+        -moz-transition: background .2s linear, color .2s linear;
+        transition: background .2s linear, color .2s linear;
+        &.swal2-cancel {
+            color: $bg_tab_grey_medium !important;
+        }
+        &.swal2-confirm {
+            border: solid 1px $blue !important;
+            background: $blue !important;
+            &:active {
+                background: $blue !important;
+                color: $black important;
+            }
+            &:focus, &:hover {
+                background: transparent !important;
+            }
+        }
+    }
+    button, .label {
+        font-size: 1.4rem;
+        text-align: left;
+        margin-bottom: 0.25rem;
+    }
+    input, textarea {
+        background: $bg_tab_grey_medium;
+        color: $text_color;
+        &::-webkit-input-placeholder, &::-moz-placeholder {
+            color: $text_color_hover !important;
+        }
+    }
+    textarea {
+        height: 185px !important;
+        padding: .75rem !important;
+        resize: none;
+    }
+}
+.swal2-modal {
+    padding: 1.875rem !important;
+}
+.swal2-popup {
+    background: $bg_app_grey_dark !important;
+    border: solid 1px $text_color;
+    border-radius: 2px !important;
+    height: 65rem;
+    width: 42rem !important;
+    * {
+        color: $text_color !important;
+    }
+}
+.swal2-title {
+    margin-bottom: 30px !important;
+}
+
+@-webkit-keyframes backdropAnimation {
+    from { backdrop-filter: blur(0); }
+    to { backdrop-filter: blur(5px); }
+}
+@-moz-keyframes backdropAnimation {
+    from { backdrop-filter: blur(0); }
+    to { backdrop-filter: blur(5px); }
+}
+@keyframes backdropAnimation {
+    from { backdrop-filter: blur(0); }
+    to { backdrop-filter: blur(5px); }
+}

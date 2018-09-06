@@ -3,6 +3,10 @@
     "en": "About",
     "fr": "À propos de"
   },
+  "cancel": {
+    "en": "Cancel",
+    "fr": "Annuler"
+  },
   "contact": {
     "en": "Contact",
     "fr": "Contact"
@@ -14,6 +18,62 @@
   "contact.mail": {
     "en": "By mail",
     "fr": "Par mail"
+  },
+  "contact.mail.hi": {
+    "en": "Hello Trystan !",
+    "fr": "Bonjour Trystan !"
+  },
+  "contact.mail.label_mail": {
+    "en": "Your mail",
+    "fr": "Votre mail"
+  },
+  "contact.mail.label_message": {
+    "en": "Your message",
+    "fr": "Votre message"
+  },
+  "contact.mail.label_name": {
+    "en": "Your firstname & lastname",
+    "fr": "Votre prénom & nom"
+  },
+  "contact.mail.label_subject": {
+    "en": "Subject of mail",
+    "fr": "Objet du mail"
+  },
+  "contact.mail.label_title": {
+    "en": "Send a mail to Trystan Eveno",
+    "fr": "Envoyer un mail à Trystan Eveno"
+  },
+  "contact.mail.send": {
+    "en": "Send",
+    "fr": "Envoyer"
+  },
+  "contact.mail.missing_parameters": {
+    "en": "You have to write your firstname/lastname, email, subject and your message to send a mail !",
+    "fr": "Vous devez renseigner votre nom/prénom, adresse email, objet de l'email et votre mail !"
+  },
+  "contact.mail.default_subject": {
+    "en": "New mail from your website",
+    "fr": "Nouveau message depuis ton site"
+  },
+  "contact.mail.missing_parameters_title": {
+    "en": "Uh oh, missing infos ¯\\_(ツ)_/¯",
+    "fr": "Oh oh, informations manquantes ¯\\_(ツ)_/¯"
+  },
+  "contact.mail.error": {
+    "en": "External error, try again later..",
+    "fr": "Erreur externe, veuillez essayer plus tard..."
+  },
+  "contact.mail.error_title": {
+    "en": "Mail not send",
+    "fr": "Mail non envoyé.. 😭"
+  },
+  "contact.mail.success": {
+    "en": "Your mail was successfully send !",
+    "fr": "Votre mail a bien été envoyé !"
+  },
+  "contact.mail.success_title": {
+    "en": "Mail send ! 😀",
+    "fr": "Mail envoyé ! 😀"
   },
   "contact.social_network": {
     "en": "Or by socials networks !",
