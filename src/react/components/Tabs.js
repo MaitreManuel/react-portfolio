@@ -58,7 +58,7 @@ const Tabs = () => {
   let template = check_pages();
 
   return (
-    <div id="SimpleBar-Div" className="wrapper-tabs">
+    <div data-simplebar data-simplebar-auto-hide="true" className="wrapper-tabs">
       <div className="tabs">
         { template }
       </div>
