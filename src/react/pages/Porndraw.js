@@ -10,7 +10,7 @@ class Porndraw extends Component {
   render() {
     return (
       <Container>
-        <div id="Porndraw" className="content">
+        <div id="Porndraw" className="content pl-5">
           <h1>Porndraw</h1>
           <p>
             Projet pour faire des dessins vectoriels à l'aide d'un alogorithme et de données provenant de PornHub

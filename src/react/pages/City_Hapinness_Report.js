@@ -10,7 +10,7 @@ class City_Happiness_Report extends Component {
   render() {
     return (
       <Container>
-        <div id="City_Happiness_Report" className="content">
+        <div id="City_Happiness_Report" className="content pl-5">
           <h1>City Happiness Report</h1>
           <p>
             Application pour voir différents critères de niveau de vie dans les plus grandes villes de France.

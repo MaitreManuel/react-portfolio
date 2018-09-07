@@ -10,7 +10,7 @@ class Space_404 extends Component {
   render() {
     return (
       <Container>
-        <div id="Space_404" className="content">
+        <div id="Space_404" className="content pl-5">
           <h1>Space 404</h1>
           <p>
             Projet personnel dans le but de réaliser des animations en pur CSS.

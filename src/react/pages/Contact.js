@@ -80,7 +80,7 @@ const Contact = () => {
   return (
     <Container>
       <div id="Contact" className="content">
-        <div className="top">
+        <div className="top text-center">
           <h1>{ translations_store('contact.title') }</h1>
           <button className="btn btn-primary" role="button" onClick={ () => sendMail() }>{ translations_store('contact.mail') }</button>
         </div>
@@ -111,7 +111,7 @@ const Contact = () => {
             <div className="circle center"></div>
           </div>
         </div>
-        <div className="bottom">
+        <div className="bottom text-center">
           <h3>{ translations_store('contact.social_network') }</h3>
           <div className="mt-5">
             <a href="https://github.com/MaitreManuel" className="px-5" target="_blank" rel="noopener noreferrer">

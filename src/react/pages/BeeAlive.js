@@ -10,7 +10,7 @@ class BeeAlive extends Component {
   render() {
     return (
       <Container>
-        <div id="BeeAlive" className="content">
+        <div id="BeeAlive" className="content pl-5">
           <h1>Bee Alive</h1>
           <p>
             Application pour partager des messages en temps réel sous forme d'abeille animée pour sensibiliser les utilisateurs à la disparition des abeilles.
