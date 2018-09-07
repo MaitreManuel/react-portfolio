@@ -66,7 +66,7 @@ const Contact = () => {
             });
           }
         });
-      } else {
+      } else if (result.value && name.value.length < 1 && email.value.length < 1 && subject.value.length < 1 && message.value.length < 1 && && honeypot.value.length > 0) {
         Swal({
           text: translations_store('contact.mail.missing_parameters'),
           title: translations_store('contact.mail.missing_parameters_title'),
