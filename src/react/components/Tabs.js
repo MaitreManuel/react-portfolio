@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import {translations_prop, translations_store} from '../../assets/tools/functions/translations';
+import { translations_store } from '../../assets/tools/functions/translations';
 import { is_json_valid } from '../../assets/tools/functions/utils';
 
 const Tabs = () => {
