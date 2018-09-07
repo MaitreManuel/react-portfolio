@@ -7,7 +7,8 @@ import Container from '../components/Container';
 import { translations_store } from '../../assets/tools/functions/translations';
 
 const URL = 'https://www.enformed.io/',
-  TOKEN = 'n42e606v';
+  TOKEN = 'n42e606v',
+  MAIL = 'trystan.eveno@gmail.com';
 
 const Contact = () => {
   const sendMail = () => {
@@ -43,7 +44,7 @@ const Contact = () => {
         form.append('message', message.value.trim());
         form.append('*reply', 'email');
         form.append('*subject', translations_store('contact.mail.default_subject'));
-        form.append('*default_email', TOKEN);
+        form.append('*default_email', MAIL);
 
         fetch(URL + TOKEN, {
           method: 'POST',
