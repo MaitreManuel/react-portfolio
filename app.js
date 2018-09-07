@@ -32993,7 +32993,7 @@ var Tabs = function Tabs() {
 
   return _react2.default.createElement(
     'div',
-    { id: 'SimpleBar-Div', className: 'wrapper-tabs' },
+    { 'data-simplebar': true, 'data-simplebar-auto-hide': 'true', className: 'wrapper-tabs' },
     _react2.default.createElement(
       'div',
       { className: 'tabs' },
