@@ -32734,8 +32734,8 @@ var Panel = function Panel() {
             path: '/bee-alive',
             icon: 'fa-forumbee',
             name: {
-              en: 'beeAlive',
-              fr: 'beeAlive'
+              en: 'Bee Alive',
+              fr: 'Bee Alive'
             }
           }, {
             path: '/city-happiness-report',
@@ -33596,22 +33596,67 @@ var School_42 = function (_Component) {
   function School_42(props) {
     _classCallCheck(this, School_42);
 
-    return _possibleConstructorReturn(this, (School_42.__proto__ || Object.getPrototypeOf(School_42)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (School_42.__proto__ || Object.getPrototypeOf(School_42)).call(this, props));
+
+    var template = _this.preRendering(),
+        lines = _this.generateFakeLineNumber(template);
+
+    _this.generateFakeLineNumber = _this.generateFakeLineNumber.bind(_this);
+    _this.preRendering = _this.preRendering.bind(_this);
+
+    _this.state = {
+      lines: lines,
+      template: template
+    };
+    return _this;
   }
 
   _createClass(School_42, [{
+    key: 'generateFakeLineNumber',
+    value: function generateFakeLineNumber(template) {
+      var nb_lines = Math.floor((document.documentElement.offsetHeight - 80) / 16) - template.props.children.length;
+      var lines_generate = [];
+
+      for (var i = 0; i < nb_lines; i++) {
+        lines_generate.push(_react2.default.createElement(
+          'span',
+          { key: 'line-' + i },
+          _react2.default.createElement('br', null)
+        ));
+      }
+
+      return lines_generate;
+    }
+  }, {
+    key: 'preRendering',
+    value: function preRendering() {
+      return _react2.default.createElement(
+        _react.Fragment,
+        null,
+        _react2.default.createElement(
+          'span',
+          null,
+          'D\xE9veloppement syst\xE8me (C, bash)'
+        )
+      );
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var lines = this.state.lines,
+          template = this.state.template;
+
       return _react2.default.createElement(
         _Container2.default,
         null,
         _react2.default.createElement(
           'div',
-          { id: 'School_42', className: 'content' },
+          { className: 'content code' },
           _react2.default.createElement(
-            'h1',
+            'pre',
             null,
-            'School_42'
+            template,
+            lines
           )
         )
       );
@@ -33673,7 +33718,47 @@ var BeeAlive = function (_Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'BeeAlive'
+            'Bee Alive'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Application pour partager des messages en temps r\xE9el sous forme d\'abeille anim\xE9e pour sensibiliser les utilisateurs \xE0 la disparition des abeilles.',
+            _react2.default.createElement('br', null),
+            'Librairies :'
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Socket.io'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Mongoose (ORM pour MongoDB)'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Three.js'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'GSAP'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'https://naomihauret.github.io/beeAlive', target: '_blank', rel: 'noopener noreferrer' },
+              'Projet'
+            )
           )
         )
       );
@@ -33735,7 +33820,37 @@ var City_Happiness_Report = function (_Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'City_Happiness_Report'
+            'City Happiness Report'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Application pour voir diff\xE9rents crit\xE8res de niveau de vie dans les plus grandes villes de France.',
+            _react2.default.createElement('br', null),
+            'Librairies :'
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'React v16'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Bootstrap v4'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'https://maitremanuel.github.io/cities-happiness-report', target: '_blank', rel: 'noopener noreferrer' },
+              'Projet'
+            )
           )
         )
       );
@@ -33798,6 +33913,41 @@ var Porndraw = function (_Component) {
             'h1',
             null,
             'Porndraw'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Projet pour faire des dessins vectoriels \xE0 l\'aide d\'un alogorithme et de donn\xE9es provenant de PornHub',
+            _react2.default.createElement('br', null),
+            'Librairies :'
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Express'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'dat.gui'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'canvas2svg'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'https://maitremanuel.github.io/porndraw', target: '_blank', rel: 'noopener noreferrer' },
+              'Projet'
+            )
           )
         )
       );
@@ -33859,7 +34009,32 @@ var Space_404 = function (_Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'Space_404'
+            'Space 404'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Projet personnel dans le but de r\xE9aliser des animations en pur CSS.',
+            _react2.default.createElement('br', null),
+            'Techno :'
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'CSS'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'https://maitremanuel.github.io/space_404', target: '_blank', rel: 'noopener noreferrer' },
+              'Projet'
+            )
           )
         )
       );

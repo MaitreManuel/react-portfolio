@@ -73,8 +73,8 @@ const Panel = () => {
                 path  : '/bee-alive',
                 icon  : 'fa-forumbee',
                 name  : {
-                  en: 'beeAlive',
-                  fr: 'beeAlive'
+                  en: 'Bee Alive',
+                  fr: 'Bee Alive'
                 }
               }, {
                 path  : '/city-happiness-report',
